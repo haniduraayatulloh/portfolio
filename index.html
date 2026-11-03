@@ -3,160 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hanidura Ayatulloh | System Analyst & Software Engineer Portfolio</title>
+    <title>Hanidura Ayatulloh - System Analyst & Software Engineer</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        primary: { 50: '#eef2ff', 100: '#e0e7ff', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', 800: '#3730a3', 900: '#312e81' }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif']
+                        primary: '#1e40af', // Blue 800
+                        secondary: '#3b82f6', // Blue 500
+                        dark: '#0f172a', // Slate 900
                     }
                 }
             }
         }
     </script>
-    <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
+    <!-- FontAwesome untuk Ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
-
-    <!-- Notification Toast (for custom alerts) -->
-    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-900 text-white px-6 py-3 rounded-xl shadow-2xl flex items-center gap-3 border border-slate-700">
-        <i class="fa-solid fa-circle-check text-emerald-400 text-xl"></i>
-        <span id="toast-message" class="text-sm font-medium">Notification message</span>
-    </div>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
     <!-- Header / Navbar -->
-    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200 transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#hero" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-600 flex items-center justify-center text-white font-bold shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
-                    HA
-                </div>
-                <div>
-                    <span class="font-bold text-slate-900 text-lg tracking-tight block leading-tight">Hanidura Ayatulloh</span>
-                    <span class="text-xs font-medium text-indigo-600">System Analyst & Software Engineer</span>
-                </div>
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="font-bold text-lg text-slate-900 tracking-tight flex items-center gap-2">
+                <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                Hanidura Ayatulloh
             </a>
-
-            <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-                <a href="#about" class="hover:text-indigo-600 transition-colors">About</a>
-                <a href="#skills" class="hover:text-indigo-600 transition-colors">Skills</a>
-                <a href="#experience" class="hover:text-indigo-600 transition-colors">Experience</a>
-                <a href="#projects" class="hover:text-indigo-600 transition-colors">Projects</a>
-                <a href="#awards" class="hover:text-indigo-600 transition-colors">Awards</a>
-                <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
+                <a href="#about" class="hover:text-blue-600 transition">Tentang</a>
+                <a href="#experience" class="hover:text-blue-600 transition">Pengalaman</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Proyek</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Keahlian & Sertifikasi</a>
+                <a href="#achievements" class="hover:text-blue-600 transition">Penghargaan</a>
             </nav>
-
-            <div class="hidden md:flex items-center gap-3">
-                <a href="https://wa.me/6285226283161?text=Halo%20Hanidura%2C%20saya%20melihat%20portofolio%20Anda%20dan%20tertarik%20untuk%20berdiskusi." target="_blank" class="px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm shadow-lg shadow-indigo-500/25 transition-all flex items-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-base"></i> Let's Chat
-                </a>
-            </div>
-
-            <!-- Mobile menu button -->
-            <button id="menu-btn" class="md:hidden text-slate-600 hover:text-slate-900 focus:outline-none p-2 rounded-lg hover:bg-slate-100">
-                <i class="fa-solid fa-bars text-xl"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-5 space-y-4 shadow-xl">
-            <a href="#about" class="block text-slate-600 hover:text-indigo-600 font-medium mobile-link">About</a>
-            <a href="#skills" class="block text-slate-600 hover:text-indigo-600 font-medium mobile-link">Skills</a>
-            <a href="#experience" class="block text-slate-600 hover:text-indigo-600 font-medium mobile-link">Experience</a>
-            <a href="#projects" class="block text-slate-600 hover:text-indigo-600 font-medium mobile-link">Projects</a>
-            <a href="#awards" class="block text-slate-600 hover:text-indigo-600 font-medium mobile-link">Awards</a>
-            <a href="#contact" class="block text-slate-600 hover:text-indigo-600 font-medium mobile-link">Contact</a>
-            <div class="pt-2 border-t border-slate-100 flex gap-3">
-                <a href="https://wa.me/6285226283161?text=Halo%20Hanidura%2C%20saya%20melihat%20portofolio%20Anda." target="_blank" class="w-full py-2.5 rounded-xl bg-indigo-600 text-white text-center font-medium text-sm flex items-center justify-center gap-2 shadow-md">
-                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Me
+            <div class="flex items-center gap-3">
+                <a href="https://wa.me/6285226283161" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg shadow-sm transition flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Hubungi Saya
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative overflow-hidden pt-12 pb-20 lg:pt-24 lg:pb-32 bg-gradient-to-b from-indigo-50/50 via-white to-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-semibold tracking-wide uppercase">
-                        <span class="w-2 h-2 rounded-full bg-indigo-600 animate-pulse"></span> Available for Opportunities
+    <section class="py-16 md:py-24 bg-gradient-to-b from-blue-50/50 to-slate-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold tracking-wide uppercase">
+                    <i class="fa-solid fa-circle-check"></i> BNSP Certified Professional
+                </div>
+                <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                    Hi, I'm Hanidura Ayatulloh
+                </h1>
+                <p class="text-xl font-medium text-blue-600">
+                    System Analyst & Software Engineer
+                </p>
+                <p class="text-slate-600 text-base leading-relaxed">
+                    Lulusan S1 Informatika Universitas Brawijaya (IPK 3.64) yang berfokus pada Analisis Sistem, Pemetaan Proses Bisnis, Rekayasa Kebutuhan Berbasis Pengguna, serta pengembangan aplikasi skala enterprise dengan standar korporat dan BUMN.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="https://www.linkedin.com/in/haniduraayatulloh/" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium rounded-lg shadow transition">
+                        <i class="fa-brands fa-linkedin text-lg"></i> LinkedIn Profile
+                    </a>
+                    <a href="https://github.com/haniduraayatulloh" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 text-sm font-medium rounded-lg shadow-sm transition">
+                        <i class="fa-brands fa-github text-lg"></i> GitHub Repository
+                    </a>
+                </div>
+                <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200 text-slate-700">
+                    <div>
+                        <span class="block text-2xl font-bold text-blue-600">3.64</span>
+                        <span class="text-xs text-slate-500">GPA / IPK UB</span>
                     </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-                        Hi, I'm <span class="bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">Hanidura Ayatulloh</span>
-                    </h1>
-                    <p class="text-xl sm:text-2xl font-semibold text-slate-700">
-                        System Analyst & Software Engineer
-                    </p>
-                    <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        Informatics Engineering graduate from Universitas Brawijaya (GPA: 3.64) & BNSP-certified professional specializing in Business Process Mapping, System Design, and User-Centric Requirements Engineering.
-                    </p>
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                        <button onclick="downloadCV()" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm shadow-xl shadow-slate-900/10 transition-all flex items-center gap-2.5 hover:-translate-y-0.5">
-                            <i class="fa-solid fa-download text-indigo-400"></i> Download CV (PDF)
-                        </button>
-                        <a href="https://wa.me/6285226283161?text=Halo%20Hanidura%2C%20saya%20ingin%20berdiskusi%20mengenai%20peluang%20kerja." target="_blank" class="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 text-slate-800 font-semibold text-sm border border-slate-200 shadow-sm transition-all flex items-center gap-2.5 hover:-translate-y-0.5">
-                            <i class="fa-brands fa-whatsapp text-emerald-600 text-lg"></i> Direct WhatsApp
-                        </a>
+                    <div>
+                        <span class="block text-2xl font-bold text-blue-600">8+</span>
+                        <span class="text-xs text-slate-500">Core IT Projects</span>
                     </div>
-                    <!-- Quick Stats Badges -->
-                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-200/80 max-w-lg mx-auto lg:mx-0">
-                        <div class="text-center lg:text-left">
-                            <span class="block text-2xl font-bold text-slate-900">3.64</span>
-                            <span class="text-xs font-medium text-slate-500 uppercase tracking-wider">GPA (UB)</span>
-                        </div>
-                        <div class="text-center lg:text-left">
-                            <span class="block text-2xl font-bold text-slate-900">8+</span>
-                            <span class="text-xs font-medium text-slate-500 uppercase tracking-wider">IT Projects</span>
-                        </div>
-                        <div class="text-center lg:text-left">
-                            <span class="block text-2xl font-bold text-slate-900">BNSP</span>
-                            <span class="text-xs font-medium text-slate-500 uppercase tracking-wider">Certified</span>
-                        </div>
+                    <div>
+                        <span class="block text-2xl font-bold text-blue-600">2x</span>
+                        <span class="text-xs text-slate-500">BNSP Certified</span>
                     </div>
                 </div>
-
-                <div class="lg:col-span-5 flex justify-center">
-                    <div class="relative">
-                        <!-- Decorative background glow -->
-                        <div class="absolute -inset-4 bg-gradient-to-tr from-indigo-500 to-violet-500 rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
-                        <!-- Profile Card Container -->
-                        <div class="relative bg-white p-3 rounded-3xl shadow-2xl border border-slate-200/80 max-w-sm w-full">
-                            <div class="rounded-2xl overflow-hidden bg-slate-100 aspect-[4/5] relative">
-                                <img src="https://placehold.co/400x500/4f46e5/ffffff?text=Hanidura+Ayatulloh" alt="Hanidura Ayatulloh" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x500/e2e8f0/475569?text=Hanidura+Ayatulloh'">
-                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
-                                    <span class="text-xs font-semibold uppercase tracking-wider text-indigo-300">Lead System Analyst</span>
-                                    <span class="text-lg font-bold">Malang, Indonesia</span>
-                                </div>
-                            </div>
-                            <div class="p-4 flex items-center justify-around text-slate-600">
-                                <a href="https://www.linkedin.com/in/haniduraayatulloh/" target="_blank" class="p-2.5 rounded-xl hover:bg-indigo-50 hover:text-indigo-600 transition-colors text-xl" title="LinkedIn">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </a>
-                                <a href="https://github.com/haniduraayatulloh" target="_blank" class="p-2.5 rounded-xl hover:bg-slate-100 hover:text-slate-900 transition-colors text-xl" title="GitHub">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                                <a href="mailto:haniduraayatulloh8@gmail.com" class="p-2.5 rounded-xl hover:bg-rose-50 hover:text-rose-600 transition-colors text-xl" title="Email">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </a>
-                                <a href="https://wa.me/6285226283161" target="_blank" class="p-2.5 rounded-xl hover:bg-emerald-50 hover:text-emerald-600 transition-colors text-xl" title="WhatsApp">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                </a>
-                            </div>
+            </div>
+            <div class="md:col-span-5 flex justify-center">
+                <div class="relative w-72 h-96 sm:w-80 sm:h-[420px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-200">
+                    <!-- Placeholder/Slot untuk Foto Profesional Berjas -->
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" alt="Hanidura Ayatulloh" class="w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent flex items-end p-6">
+                        <div class="text-white">
+                            <p class="font-bold text-lg">Hanidura Ayatulloh</p>
+                            <p class="text-xs text-slate-200">Malang, East Java, Indonesia</p>
                         </div>
                     </div>
                 </div>
@@ -164,392 +100,247 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Professional Profile</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Bridging Business Goals with Technical Excellence</h2>
-                <p class="text-slate-600 text-base sm:text-lg">
-                    Dedicated informatics engineer with robust expertise in system analysis, requirement gathering, and translating complex operational challenges into scalable digital products.
+    <!-- About & Education Section -->
+    <section id="about" class="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-user-tie text-blue-600"></i> Tentang Saya
+                </h2>
+                <p class="text-slate-600 leading-relaxed mb-4">
+                    Informatics Engineering fresh graduate dari Universitas Brawijaya dan BNSP-certified Software Engineer specializing in System Analysis, Business Process Mapping, and User-Centric Requirements Engineering.
+                </p>
+                <p class="text-slate-600 leading-relaxed">
+                    Berpengalaman dalam menjembatani kebutuhan pemangku kepentingan dengan tim engineering melalui spesifikasi fungsional terstruktur (BRD, SRS, FSD) serta pemodelan alur intuitif (Use Case, Activity, dan ERD). Aktif memimpin proyek IT, membimbing talenta muda, dan berkolaborasi dalam ekosistem pengembangan perangkat lunak berskala besar.
                 </p>
             </div>
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-graduation-cap text-blue-600"></i> Pendidikan Formal
+                </h2>
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-2">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-slate-900 text-lg">S1 - Teknik Informatika</h3>
+                            <p class="text-blue-600 font-medium">Universitas Brawijaya (FILKOM UB)</p>
+                        </div>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full">IPK 3.64 / 4.00</span>
+                    </div>
+                    <p class="text-xs text-slate-500 pt-2 border-t border-slate-100">
+                        Aktif sebagai Asisten Laboratorium, Peer Tutor, dan kontestan kompetisi inovasi digital tingkat nasional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">Pengalaman Profesional & Organisasi</h2>
+            
+            <div class="space-y-8">
+                <!-- Exp 1 -->
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 shadow-sm hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Lead System Analyst (Bengkel Bejo Inventory System)</h3>
+                            <p class="text-blue-600 font-medium">Dicoding Indonesia (ASAH Program)</p>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit mt-2 md:mt-0">01 - 31 Oktober 2026</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm">
+                        <li>Melakukan elicitation kebutuhan komprehensif dan analisis proses bisnis (as-is ke to-be) untuk 4 alur operasional inti manajemen gudang spare part dan transaksi bengkel (1,200+ item).</li>
+                        <li>Menyusun dokumentasi fungsional dan teknis mendetail (BRD, SRS, FSD) yang mengurangi ambiguitas kebutuhan hingga 35%.</li>
+                    </ul>
+                </div>
+
+                <!-- Exp 2 -->
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 shadow-sm hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Lead System Analyst (KopiMetric Website)</h3>
+                            <p class="text-blue-600 font-medium">Dicoding Indonesia (DBS Camp)</p>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit mt-2 md:mt-0">05 April - 31 Mei 2026</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm">
+                        <li>Memimpin analisis end-to-end platform KopiMetric, memetakan alur interaksi konsumsi kopi dan kualitas tidur untuk 500+ active beta users.</li>
+                        <li>Memproduksi 4 kategori diagram UML (Use Case, Activity, Sequence, ERD) di 6 entitas basis data untuk memandu tim engineering.</li>
+                        <li>Mengelola pengujian UAT dengan 3 putaran validasi, mencapai 94% task success rate sebelum publikasi.</li>
+                    </ul>
+                </div>
+
+                <!-- Exp 3 -->
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 shadow-sm hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">Laboratory Teaching Assistant (Systems Analysis & Design)</h3>
+                            <p class="text-blue-600 font-medium">Faculty of Computer Science, Universitas Brawijaya</p>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit mt-2 md:mt-0">Sept - Des 2025</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm">
+                        <li>Mengevaluasi laporan analisis sistem, ERD, dan dokumen SRS untuk 25+ mahasiswa dengan akurasi 100%.</li>
+                        <li>Mengembangkan modul praktikum, buku panduan, dan templat pemodelan UML, mempercepat efisiensi sesi laboratorium hingga 30%.</li>
+                    </ul>
+                </div>
+
+                <!-- Exp 4 -->
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 shadow-sm hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900">UX Researcher & UAT Analyst</h3>
+                            <p class="text-blue-600 font-medium">Faculty of Computer Science & BKPSDM Malang Regency</p>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit mt-2 md:mt-0">Mei - Okt 2024</span>
+                    </div>
+                    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm">
+                        <li>Melakukan riset pengguna dan evaluasi prototipe untuk sistem CAT BKPSDM, meningkatkan skor usabilitas hingga 25%.</li>
+                        <li>Menjalankan UAT lintas 15+ modul fungsional, berkoordinasi dengan developer untuk mencapai 96% tingkat resolusi *bug*.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">Proyek Unggulan</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Smart Inventory System Air Mancur</h3>
+                    <p class="text-xs text-blue-600 font-semibold mb-3">System Analyst & Project Manager (Capstone)</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Pengembangan sistem manajemen inventaris cerdas berbasis web dengan arsitektur modern dan analisis kebutuhan rantai pasok terintegrasi.
+                    </p>
+                </div>
+                <span class="text-xs text-slate-400 font-medium">Fakultas Ilmu Komputer UB</span>
+            </div>
+            <!-- Project 2 -->
+            <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">MikroLine Public Transportation App</h3>
+                    <p class="text-xs text-blue-600 font-semibold mb-3">System Analyst, UI Designer & PM</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Aplikasi transportasi publik online Malang dengan perancangan alur pengguna, wireframe interaktif, dan pemodelan proses bisnis yang komprehensif.
+                    </p>
+                </div>
+                <span class="text-xs text-slate-400 font-medium">Start-Up Action Competition</span>
+            </div>
+            <!-- Project 3 -->
+            <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">KopiMetric Platform</h3>
+                    <p class="text-xs text-blue-600 font-semibold mb-3">Lead System Analyst (DBS Camp)</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Platform web analitik dampak konsumsi kopi terhadap kualitas tidur dengan pemodelan basis data relasional dan diagram UML lengkap.
+                    </p>
+                </div>
+                <span class="text-xs text-slate-400 font-medium">Live Web App Integration</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Certifications Section -->
+    <section id="skills" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">Keahlian & Sertifikasi Profesional</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/80 hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl mb-6">
-                        <i class="fa-solid fa-compass-drafting"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">System Analysis & Design</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Expert in producing comprehensive requirements specification (BRD, SRS, FSD) and precise workflow modeling using UML (Use Case, Activity, Sequence) and ERD.
-                    </p>
-                </div>
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/80 hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div class="w-12 h-12 rounded-xl bg-violet-100 text-violet-600 flex items-center justify-center text-xl mb-6">
-                        <i class="fa-solid fa-users-viewfinder"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Stakeholder & UAT Management</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Skilled in conducting elicitation sessions, stakeholder communication, and executing rigorous User Acceptance Testing (UAT) to ensure high task success and bug resolution rates.
-                    </p>
-                </div>
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200/80 hover:shadow-xl transition-all hover:-translate-y-1">
-                    <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl mb-6">
-                        <i class="fa-solid fa-laptop-code"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Full-Stack & UX Foundation</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        Backed by hands-on development experience (Python, JavaScript, Kotlin) and UI/UX research using Figma, ensuring seamless handoffs between analysis and engineering teams.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Core Competencies</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Skills & Technical Expertise</h2>
-                <p class="text-slate-600 text-base">Categorized proficiency standards for corporate and BUMN readiness.</p>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <!-- Hard Skills -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold">
-                                <i class="fa-solid fa-gears"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-slate-900">Hard Skills</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">System Analysis & Design</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Requirements Elicitation</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Business Process Analysis</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">SRS & FSD Documentation</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">UML Modeling (Use Case, Activity, Sequence)</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Entity Relationship Diagram (ERD)</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">User Acceptance Testing (UAT)</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">UX Research & Usability Testing</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Agile & Scrum Methodologies</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tools & Software -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold">
-                                <i class="fa-solid fa-toolbox"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-slate-900">Tools & Software</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Figma & Figjam</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Trello & Jira</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Useberry</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Microsoft Office Suite</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Python & JavaScript</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Kotlin & Node.js</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">PostgreSQL & MySQL</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Android Studio & Postman</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Soft Skills -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-200/80 shadow-sm flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold">
-                                <i class="fa-solid fa-user-check"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-slate-900">Soft Skills</h3>
-                        </div>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Leadership & Teamwork</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Stakeholder Communication</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Analytical & Critical Thinking</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Problem-Solving & Adaptability</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Negotiation & Diplomacy</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Cross-functional Collaboration</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Emotional Intelligence</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold">Presentation & Facilitation</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Work Experience & Projects Section -->
-    <section id="experience" class="py-20 bg-white border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Career Track Record</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Work Experience & Projects</h2>
-                <p class="text-slate-600 text-base">Proven leadership in system analysis, agile development, and enterprise deployments.</p>
-            </div>
-
-            <!-- Experience Timeline -->
-            <div class="space-y-12 mb-20 max-w-4xl mx-auto">
-                <!-- Item 1 -->
-                <div class="relative pl-8 sm:pl-10 border-l-2 border-indigo-600 space-y-3">
-                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-indigo-50"></div>
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                        <h3 class="text-xl font-bold text-slate-900">Lead System Analyst</h3>
-                        <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full w-fit">01 - 31 October 2026</span>
-                    </div>
-                    <p class="text-sm font-medium text-slate-600">Bengkel Bejo Inventory Management System | Dicoding Indonesia (ASAH 2026)</p>
-                    <ul class="space-y-2 text-slate-600 text-sm pt-2 list-disc list-inside">
-                        <li>Conducted comprehensive requirements elicitation and business process analysis (as-is to to-be) across 4 core operational workflows for 1,200+ automotive items.</li>
-                        <li>Authored detailed functional and technical documentation (BRD, SRS, FSD) that reduced requirement ambiguity by 35%.</li>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <h3 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-code text-blue-600"></i> Hard Skills
+                    </h3>
+                    <ul class="space-y-2 text-sm text-slate-700">
+                        <li>• System Analysis & Design</li>
+                        <li>• Requirements Elicitation & Analysis</li>
+                        <li>• Business Process Analysis & Mapping</li>
+                        <li>• SRS Documentation & FSD / BRD</li>
+                        <li>• UML Modeling (Use Case, Activity, Sequence)</li>
+                        <li>• Entity Relationship Diagram (ERD)</li>
+                        <li>• UAT & QA Validation</li>
                     </ul>
                 </div>
-
-                <!-- Item 2 -->
-                <div class="relative pl-8 sm:pl-10 border-l-2 border-indigo-600 space-y-3">
-                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-indigo-50"></div>
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                        <h3 class="text-xl font-bold text-slate-900">Lead System Analyst</h3>
-                        <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full w-fit">05 April - 31 May 2026</span>
-                    </div>
-                    <p class="text-sm font-medium text-slate-600">KopiMetric Website | Dicoding Indonesia (DBS Camp 2026)</p>
-                    <ul class="space-y-2 text-slate-600 text-sm pt-2 list-disc list-inside">
-                        <li>Led end-to-end analysis mapping user workflows and interaction metrics for 500+ active beta users.</li>
-                        <li>Produced 4 core categories of UML diagrams (Use Case, Activity, Sequence, ERD) across 6 database entities.</li>
-                        <li>Organized 3 rounds of UAT with stakeholders, achieving a 94% task success rate prior to launch.</li>
+                <!-- Tools & Professional -->
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <h3 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-toolbox text-blue-600"></i> Tools & Methodologies
+                    </h3>
+                    <ul class="space-y-2 text-sm text-slate-700">
+                        <li>• Figma & Figjam</li>
+                        <li>• Trello & Useberry</li>
+                        <li>• Agile & Scrum Methodologies</li>
+                        <li>• Python & JavaScript Basics</li>
+                        <li>• Microsoft Office Professional</li>
+                        <li>• UX Research & Usability Testing</li>
                     </ul>
                 </div>
-
-                <!-- Item 3 -->
-                <div class="relative pl-8 sm:pl-10 border-l-2 border-indigo-600 space-y-3">
-                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-indigo-600 ring-4 ring-indigo-50"></div>
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                        <h3 class="text-xl font-bold text-slate-900">UX Researcher & UAT Analyst</h3>
-                        <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full w-fit">10 May - 10 October 2024</span>
-                    </div>
-                    <p class="text-sm font-medium text-slate-600">CAT System in BKPSDM Malang Regency</p>
-                    <ul class="space-y-2 text-slate-600 text-sm pt-2 list-disc list-inside">
-                        <li>Evaluated interface prototypes and transformed administrative workflows, improving usability scores by 25%.</li>
-                        <li>Executed comprehensive UAT across 15+ functional modules with a 96% bug resolution rate prior to rollout.</li>
+                <!-- Certifications -->
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <h3 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-certificate text-blue-600"></i> Sertifikasi Resmi
+                    </h3>
+                    <ul class="space-y-3 text-sm text-slate-700">
+                        <li class="font-semibold text-slate-900">
+                            1. Software Engineer (BNSP)
+                            <span class="block text-xs font-normal text-slate-500">LSP-P1 Universitas Brawijaya</span>
+                        </li>
+                        <li class="font-semibold text-slate-900">
+                            2. Web Developer Madya (BNSP)
+                            <span class="block text-xs font-normal text-slate-500">LSP-P1 Universitas Brawijaya</span>
+                        </li>
                     </ul>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div id="projects">
-                <div class="text-center mb-10">
-                    <h3 class="text-2xl font-bold text-slate-900">Featured Projects</h3>
-                    <p class="text-slate-600 text-sm mt-1">Key academic & competition portfolio highlights.</p>
+    <!-- Awards Section -->
+    <section id="achievements" class="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">Penghargaan & Prestasi</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm flex items-start gap-4">
+                <div class="p-3 bg-blue-100 text-blue-700 rounded-lg">
+                    <i class="fa-solid fa-trophy text-xl"></i>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                    <!-- Project 1 -->
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between hover:shadow-lg transition-all">
-                        <div>
-                            <span class="text-xs font-semibold text-indigo-600 block mb-2">03 Feb - 31 May 2025</span>
-                            <h4 class="text-lg font-bold text-slate-900 mb-2">Smart Inventory Management System</h4>
-                            <p class="text-xs font-medium text-slate-500 mb-3">Faculty of Computer Science (Capstone Project)</p>
-                            <p class="text-slate-600 text-sm">System Analyst & Project Manager overseeing end-to-end inventory tracking and store warehousing architecture.</p>
-                        </div>
-                    </div>
-                    <!-- Project 2 -->
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between hover:shadow-lg transition-all">
-                        <div>
-                            <span class="text-xs font-semibold text-indigo-600 block mb-2">05 August - 15 December 2024</span>
-                            <h4 class="text-lg font-bold text-slate-900 mb-2">MikroLine: Malang Public Transportation App</h4>
-                            <p class="text-xs font-medium text-slate-500 mb-3">Start-Up Action Competition</p>
-                            <p class="text-slate-600 text-sm">System Analyst, UI Designer & Project Manager for public transit mapping and commuter scheduling system.</p>
-                        </div>
-                    </div>
-                    <!-- Project 3 -->
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between hover:shadow-lg transition-all">
-                        <div>
-                            <span class="text-xs font-semibold text-indigo-600 block mb-2">15 April - 25 May 2023</span>
-                            <h4 class="text-lg font-bold text-slate-900 mb-2">W-Book: Travel & Tour Booking Platform</h4>
-                            <p class="text-xs font-medium text-slate-500 mb-3">Business Plan Competition</p>
-                            <p class="text-slate-600 text-sm">UX Researcher focusing on user journey optimization and booking process simplification for startup pitch.</p>
-                        </div>
-                    </div>
+                <div>
+                    <h3 class="font-bold text-slate-900">Best Presenter in INVENT International Conference</h3>
+                    <p class="text-xs text-slate-500 mt-1">Universitas Brawijaya (Oktober 2026)</p>
+                </div>
+            </div>
+            <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm flex items-start gap-4">
+                <div class="p-3 bg-blue-100 text-blue-700 rounded-lg">
+                    <i class="fa-solid fa-award text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900">Most Favorite Paper in International Student Conference</h3>
+                    <p class="text-xs text-slate-500 mt-1">RUDN University, KOMNAS HAM RI (September 2026)</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Awards & Achievements Section -->
-    <section id="awards" class="py-20 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Recognition</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Awards & Achievements</h2>
-                <p class="text-slate-600 text-base">Milestones in academic research, competitions, and institutional funding.</p>
+    <!-- Footer / Contact -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <p class="font-bold text-white text-lg">Hanidura Ayatulloh</p>
+                <p class="text-sm text-slate-400">System Analyst & Software Engineer | Malang, Indonesia</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="bg-white p-8 rounded-2xl border border-slate-200/85 shadow-sm text-center space-y-4">
-                    <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl mx-auto">
-                        <i class="fa-solid fa-trophy"></i>
-                    </div>
-                    <span class="text-xs font-bold text-indigo-600 block">27 October 2026</span>
-                    <h3 class="text-lg font-bold text-slate-900">Best Presenter</h3>
-                    <p class="text-slate-600 text-sm">ATU-Net INVENT International Conference</p>
-                    <span class="text-xs font-medium text-slate-400 block pt-2">University of Brawijaya</span>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl border border-slate-200/85 shadow-sm text-center space-y-4">
-                    <div class="w-14 h-14 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center text-2xl mx-auto">
-                        <i class="fa-solid fa-award"></i>
-                    </div>
-                    <span class="text-xs font-bold text-indigo-600 block">07-08 September 2026</span>
-                    <h3 class="text-lg font-bold text-slate-900">Most Favorite Paper</h3>
-                    <p class="text-slate-600 text-sm">International Student Conference Human Right</p>
-                    <span class="text-xs font-medium text-slate-400 block pt-2">UB, RUDN University, Komnas HAM</span>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl border border-slate-200/85 shadow-sm text-center space-y-4">
-                    <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mx-auto">
-                        <i class="fa-solid fa-seedling"></i>
-                    </div>
-                    <span class="text-xs font-bold text-indigo-600 block">2024-2025</span>
-                    <h3 class="text-lg font-bold text-slate-900">Top Funding Team</h3>
-                    <p class="text-slate-600 text-sm">Top 9 & Top 19 Funding Teams in Start-Up Action</p>
-                    <span class="text-xs font-medium text-slate-400 block pt-2">Directorate of Innovation & Science Techno Park UB</span>
-                </div>
+            <div class="flex items-center gap-6 text-xl">
+                <a href="https://www.linkedin.com/in/haniduraayatulloh/" target="_blank" class="hover:text-blue-400 transition"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/haniduraayatulloh" target="_blank" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:haniduraayatulloh8@gmail.com" class="hover:text-blue-400 transition"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://wa.me/6285226283161" target="_blank" class="hover:text-green-400 transition"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-slate-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(#3730a3_1px,transparent_1px)] [background-size:16px_16px] opacity-25"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <span class="text-indigo-400 font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Let's Build Impactful Systems Together.</h2>
-                    <p class="text-slate-300 text-base leading-relaxed">
-                        Whether you are looking for a dedicated System Analyst or Software Engineer for your corporate team or BUMN project, my inbox is always open. Let's connect!
-                    </p>
-                    <div class="space-y-4 pt-4">
-                        <a href="mailto:haniduraayatulloh8@gmail.com" class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
-                            <div class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-600 group-hover:text-white transition-all">
-                                <i class="fa-solid fa-envelope text-lg"></i>
-                            </div>
-                            <div>
-                                <span class="text-xs text-slate-400 block">Email Address</span>
-                                <span class="font-medium text-sm sm:text-base">haniduraayatulloh8@gmail.com</span>
-                            </div>
-                        </a>
-                        <a href="https://wa.me/6285226283161" target="_blank" class="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
-                            <div class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-600 group-hover:text-white transition-all">
-                                <i class="fa-brands fa-whatsapp text-lg"></i>
-                            </div>
-                            <div>
-                                <span class="text-xs text-slate-400 block">WhatsApp / Phone</span>
-                                <span class="font-medium text-sm sm:text-base">+62 852-2628-3161</span>
-                            </div>
-                        </a>
-                        <div class="flex items-center gap-4 text-slate-300">
-                            <div class="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-violet-400">
-                                <i class="fa-solid fa-location-dot text-lg"></i>
-                            </div>
-                            <div>
-                                <span class="text-xs text-slate-400 block">Location</span>
-                                <span class="font-medium text-sm sm:text-base">Malang City, Lowokwaru, 65144, Indonesia</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-slate-800/80 backdrop-blur-md p-8 rounded-3xl border border-slate-700 shadow-2xl">
-                    <h3 class="text-xl font-bold mb-6">Send Direct Message</h3>
-                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Your Name</label>
-                            <input type="text" id="sender-name" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500" placeholder="e.g. HR Recruiter BUMN">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Your Email</label>
-                            <input type="email" id="sender-email" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500" placeholder="e.g. recruiter@company.co.id">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Message</label>
-                            <textarea id="sender-message" rows="4" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-indigo-500" placeholder="Hello Hanidura, we would like to interview you..."></textarea>
-                        </div>
-                        <button type="submit" class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-500 py-8 border-t border-slate-800 text-xs">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p>&copy; 2026 Hanidura Ayatulloh. All rights reserved.</p>
-            <div class="flex items-center gap-6">
-                <a href="https://www.linkedin.com/in/haniduraayatulloh/" target="_blank" class="hover:text-slate-300 transition-colors">LinkedIn</a>
-                <a href="https://github.com/haniduraayatulloh" target="_blank" class="hover:text-slate-300 transition-colors">GitHub</a>
-                <a href="https://wa.me/6285226283161" target="_blank" class="hover:text-slate-300 transition-colors">WhatsApp</a>
-            </div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
+            &copy; 2026 Hanidura Ayatulloh. Built with professional standards for Enterprise & BUMN Recruitment.
         </div>
     </footer>
 
-    <!-- JavaScript Interactive Handlers -->
-    <script>
-        // Mobile menu toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Custom Toast Notification
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            const msgEl = document.getElementById('toast-message');
-            msgEl.textContent = message;
-            toast.classList.remove('translate-y-20', 'opacity-0');
-            toast.classList.add('translate-y-0', 'opacity-100');
-            setTimeout(() => {
-                toast.classList.remove('translate-y-0', 'opacity-100');
-                toast.classList.add('translate-y-20', 'opacity-0');
-            }, 3500);
-        }
-
-        // Download CV Simulation
-        function downloadCV() {
-            showToast("Downloading Hanidura's Professional CV (PDF)...");
-            // Simulate download action or link
-            setTimeout(() => {
-                const link = document.createElement('a');
-                link.href = '#';
-                link.setAttribute('download', 'MAGANGHUB_CV_HANIDURA_AYATULLOH.pdf');
-                showToast("CV download initiated successfully!");
-            }, 1000);
-        }
-
-        // Contact Form Submit Handler
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const name = document.getElementById('sender-name').value;
-            showToast(`Thank you ${name}! Your message has been sent successfully.`);
-            document.getElementById('contact-form').reset();
-        }
-    </script>
 </body>
 </html>
