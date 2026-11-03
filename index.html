@@ -4,31 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hanidura Ayatulloh - System Analyst & Software Engineer</title>
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1e40af', // Blue 800
-                        secondary: '#3b82f6', // Blue 500
-                        dark: '#0f172a', // Slate 900
+                        primary: '#1e40af',
+                        dark: '#0f172a',
                     }
                 }
             }
         }
     </script>
-    <!-- FontAwesome untuk Ikon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
     <!-- Header / Navbar -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <a href="#" class="font-bold text-lg text-slate-900 tracking-tight flex items-center gap-2">
-                <span class="w-3 h-3 bg-blue-600 rounded-full"></span>
+                <span class="w-3 h-3 bg-blue-600 rounded-full animate-pulse"></span>
                 Hanidura Ayatulloh
             </a>
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
@@ -47,52 +45,53 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="py-16 md:py-24 bg-gradient-to-b from-blue-50/50 to-slate-50 border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+    <section class="py-16 md:py-24 bg-gradient-to-br from-blue-900 via-slate-900 to-slate-950 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
             <div class="md:col-span-7 space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold tracking-wide uppercase">
-                    <i class="fa-solid fa-circle-check"></i> BNSP Certified Professional
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-semibold tracking-wide uppercase">
+                    <i class="fa-solid fa-circle-check text-blue-400"></i> BNSP Certified Software Engineer & Web Developer[cite: 5]
                 </div>
-                <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-                    Hi, I'm Hanidura Ayatulloh
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-300">Hanidura Ayatulloh</span>
                 </h1>
-                <p class="text-xl font-medium text-blue-600">
-                    System Analyst & Software Engineer
+                <p class="text-xl font-medium text-blue-300">
+                    System Analyst, Data Analyst & Software Engineer
                 </p>
-                <p class="text-slate-600 text-base leading-relaxed">
-                    Lulusan S1 Informatika Universitas Brawijaya (IPK 3.64) yang berfokus pada Analisis Sistem, Pemetaan Proses Bisnis, Rekayasa Kebutuhan Berbasis Pengguna, serta pengembangan aplikasi skala enterprise dengan standar korporat dan BUMN.
+                <p class="text-slate-300 text-base leading-relaxed">
+                    Informatics Engineering graduate from University of Brawijaya (GPA 3.64)[cite: 5, 9] specializing in system analysis, business process mapping, mobile development (Kotlin/Android), and AI (Python)[cite: 5, 9].
                 </p>
                 <div class="flex flex-wrap gap-4 pt-2">
-                    <a href="https://www.linkedin.com/in/haniduraayatulloh/" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white text-sm font-medium rounded-lg shadow transition">
+                    <a href="https://www.linkedin.com/in/haniduraayatulloh/" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg shadow transition">
                         <i class="fa-brands fa-linkedin text-lg"></i> LinkedIn Profile
                     </a>
-                    <a href="https://github.com/haniduraayatulloh" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 text-sm font-medium rounded-lg shadow-sm transition">
-                        <i class="fa-brands fa-github text-lg"></i> GitHub Repository
+                    <a href="https://github.com/haniduraayatulloh" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 text-sm font-medium rounded-lg shadow-sm transition">
+                        <i class="fa-brands fa-github text-lg"></i> GitHub
                     </a>
                 </div>
-                <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200 text-slate-700">
+                <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800 text-slate-300">
                     <div>
-                        <span class="block text-2xl font-bold text-blue-600">3.64</span>
-                        <span class="text-xs text-slate-500">GPA / IPK UB</span>
+                        <span class="block text-2xl font-bold text-blue-400">3.64</span>
+                        <span class="text-xs text-slate-400">GPA UB[cite: 5, 9]</span>
                     </div>
                     <div>
-                        <span class="block text-2xl font-bold text-blue-600">8+</span>
-                        <span class="text-xs text-slate-500">Core IT Projects</span>
+                        <span class="block text-2xl font-bold text-blue-400">8+</span>
+                        <span class="text-xs text-slate-400">Core IT Projects[cite: 5]</span>
                     </div>
                     <div>
-                        <span class="block text-2xl font-bold text-blue-600">2x</span>
-                        <span class="text-xs text-slate-500">BNSP Certified</span>
+                        <span class="block text-2xl font-bold text-blue-400">2x</span>
+                        <span class="text-xs text-slate-400">BNSP Certified[cite: 5]</span>
                     </div>
                 </div>
             </div>
+            <!-- Foto Asli Berjas Hanidura -->
             <div class="md:col-span-5 flex justify-center">
-                <div class="relative w-72 h-96 sm:w-80 sm:h-[420px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-200">
-                    <!-- Placeholder/Slot untuk Foto Profesional Berjas -->
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" alt="Hanidura Ayatulloh" class="w-full h-full object-cover object-top">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent flex items-end p-6">
+                <div class="relative w-72 h-96 sm:w-80 sm:h-[420px] rounded-2xl overflow-hidden shadow-2xl border-4 border-slate-700 bg-slate-800">
+                    <img src="Foto semi formal jas – 23 Oct 2026, 2.33 pm.png" alt="Hanidura Ayatulloh" class="w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6">
                         <div class="text-white">
                             <p class="font-bold text-lg">Hanidura Ayatulloh</p>
-                            <p class="text-xs text-slate-200">Malang, East Java, Indonesia</p>
+                            <p class="text-xs text-blue-300">Malang, Jawa Timur, Indonesia[cite: 9]</p>
                         </div>
                     </div>
                 </div>
@@ -102,16 +101,16 @@
 
     <!-- About & Education Section -->
     <section id="about" class="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-2">
                     <i class="fa-solid fa-user-tie text-blue-600"></i> Tentang Saya
                 </h2>
                 <p class="text-slate-600 leading-relaxed mb-4">
-                    Informatics Engineering fresh graduate dari Universitas Brawijaya dan BNSP-certified Software Engineer specializing in System Analysis, Business Process Mapping, and User-Centric Requirements Engineering.
+                    As an Informatics Engineering graduate (GPA 3.64) and BNSP Certified Software Engineer & Web Developer with expertise in Mobile UI/UX Design (Figma), Android (Kotlin), and AI (Python)[cite: 5, 9].
                 </p>
                 <p class="text-slate-600 leading-relaxed">
-                    Berpengalaman dalam menjembatani kebutuhan pemangku kepentingan dengan tim engineering melalui spesifikasi fungsional terstruktur (BRD, SRS, FSD) serta pemodelan alur intuitif (Use Case, Activity, dan ERD). Aktif memimpin proyek IT, membimbing talenta muda, dan berkolaborasi dalam ekosistem pengembangan perangkat lunak berskala besar.
+                    I combine technical acumen with strong leadership, public speaking, and project management capabilities built through roles in mentorship, client relations, and HRD[cite: 9].
                 </p>
             </div>
             <div>
@@ -121,13 +120,13 @@
                 <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-2">
                     <div class="flex justify-between items-start">
                         <div>
-                            <h3 class="font-bold text-slate-900 text-lg">S1 - Teknik Informatika</h3>
-                            <p class="text-blue-600 font-medium">Universitas Brawijaya (FILKOM UB)</p>
+                            <h3 class="font-bold text-slate-900 text-lg">Sarjana Komputer, Informatics Engineering</h3>
+                            <p class="text-blue-600 font-medium">Universitas Brawijaya</p>
                         </div>
-                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full">IPK 3.64 / 4.00</span>
+                        <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full">IPK 3.64[cite: 5, 9]</span>
                     </div>
                     <p class="text-xs text-slate-500 pt-2 border-t border-slate-100">
-                        Aktif sebagai Asisten Laboratorium, Peer Tutor, dan kontestan kompetisi inovasi digital tingkat nasional.
+                        Juli 2022 - Juli 2026[cite: 19]
                     </p>
                 </div>
             </div>
@@ -137,67 +136,110 @@
     <!-- Experience Section -->
     <section id="experience" class="py-16 bg-white border-t border-slate-200">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">Pengalaman Profesional & Organisasi</h2>
-            
-            <div class="space-y-8">
+            <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">Pengalaman Profesional</h2>
+            <div class="space-y-6">
                 <!-- Exp 1 -->
-                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 shadow-sm hover:shadow-md transition">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Lead System Analyst (Bengkel Bejo Inventory System)</h3>
-                            <p class="text-blue-600 font-medium">Dicoding Indonesia (ASAH Program)</p>
-                        </div>
-                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit mt-2 md:mt-0">01 - 31 Oktober 2026</span>
+                <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                        <h3 class="text-xl font-bold text-slate-900">Android Developer</h3>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit">Januari 2026 - Juli 2026[cite: 9]</span>
                     </div>
-                    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm">
-                        <li>Melakukan elicitation kebutuhan komprehensif dan analisis proses bisnis (as-is ke to-be) untuk 4 alur operasional inti manajemen gudang spare part dan transaksi bengkel (1,200+ item).</li>
-                        <li>Menyusun dokumentasi fungsional dan teknis mendetail (BRD, SRS, FSD) yang mengurangi ambiguitas kebutuhan hingga 35%.</li>
+                    <p class="text-blue-600 text-sm font-medium mb-3">VRASMEDIA IT SOLUTION (Semarang, Jawa Tengah)[cite: 9]</p>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm">
+                        <li>Mengoptimalkan user flows dan UI untuk CRM Android apps, meningkatkan efisiensi navigasi dan UX sebesar 35%, serta menurunkan drop-off rates 20%[cite: 9].</li>
+                        <li>Mengembangkan front-end CRM menggunakan Kotlin (MVVM & Coroutines) untuk 4 modul inti perusahaan, memangkas app load time 40%[cite: 9].</li>
+                        <li>Mengelola database via Firebase Console untuk 5,000+ active users dengan sinkronisasi data real-time di bawah 1.2 detik[cite: 9].</li>
                     </ul>
                 </div>
 
                 <!-- Exp 2 -->
-                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 shadow-sm hover:shadow-md transition">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Lead System Analyst (KopiMetric Website)</h3>
-                            <p class="text-blue-600 font-medium">Dicoding Indonesia (DBS Camp)</p>
-                        </div>
-                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit mt-2 md:mt-0">05 April - 31 Mei 2026</span>
+                <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                        <h3 class="text-xl font-bold text-slate-900">Class Manager in Full-Stack Web Development Bootcamp</h3>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit">Desember 2025 - Juli 2026[cite: 10]</span>
                     </div>
-                    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm">
-                        <li>Memimpin analisis end-to-end platform KopiMetric, memetakan alur interaksi konsumsi kopi dan kualitas tidur untuk 500+ active beta users.</li>
-                        <li>Memproduksi 4 kategori diagram UML (Use Case, Activity, Sequence, ERD) di 6 entitas basis data untuk memandu tim engineering.</li>
-                        <li>Mengelola pengujian UAT dengan 3 putaran validasi, mencapai 94% task success rate sebelum publikasi.</li>
+                    <p class="text-blue-600 text-sm font-medium mb-3">dibimbing.id (Jakarta Selatan)[cite: 10]</p>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm">
+                        <li>Bertindak sebagai Master of Ceremony dan mengoordinasikan 50+ live class sessions, mendongkrak partisipasi aktif siswa sebesar 35%[cite: 10].</li>
+                        <li>Mengelola metrik performa siswa termasuk Course Retention Rates (CRR), menurunkan tingkat dropout siswa sebesar 20%[cite: 10].</li>
                     </ul>
                 </div>
 
                 <!-- Exp 3 -->
-                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 shadow-sm hover:shadow-md transition">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">Laboratory Teaching Assistant (Systems Analysis & Design)</h3>
-                            <p class="text-blue-600 font-medium">Faculty of Computer Science, Universitas Brawijaya</p>
-                        </div>
-                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit mt-2 md:mt-0">Sept - Des 2025</span>
+                <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                        <h3 class="text-xl font-bold text-slate-900">Peer Tutor AI Engineer</h3>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit">Mei 2026[cite: 11]</span>
                     </div>
-                    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm">
-                        <li>Mengevaluasi laporan analisis sistem, ERD, dan dokumen SRS untuk 25+ mahasiswa dengan akurasi 100%.</li>
-                        <li>Mengembangkan modul praktikum, buku panduan, dan templat pemodelan UML, mempercepat efisiensi sesi laboratorium hingga 30%.</li>
+                    <p class="text-blue-600 text-sm font-medium mb-3">Coding Camp powered by DBS Foundation (Bandung)[cite: 11]</p>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm">
+                        <li>Mementori peserta jalur AI Engineer, menutup kesenjangan pemahaman dan mencapai 100% catch-up success rate pada materi machine learning[cite: 11].</li>
+                        <li>Mengarahkan tugas praktikal Fundamental Deep Learning, mendongkrak efisiensi penyelesaian tugas siswa hingga 40%[cite: 11].</li>
                     </ul>
                 </div>
 
                 <!-- Exp 4 -->
-                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 shadow-sm hover:shadow-md transition">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-slate-900">UX Researcher & UAT Analyst</h3>
-                            <p class="text-blue-600 font-medium">Faculty of Computer Science & BKPSDM Malang Regency</p>
-                        </div>
-                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit mt-2 md:mt-0">Mei - Okt 2024</span>
+                <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                        <h3 class="text-xl font-bold text-slate-900">Project Manager & Perekrut</h3>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit">Februari 2026 - Mei 2026[cite: 12]</span>
                     </div>
-                    <ul class="list-disc list-inside space-y-2 text-slate-600 text-sm">
-                        <li>Melakukan riset pengguna dan evaluasi prototipe untuk sistem CAT BKPSDM, meningkatkan skor usabilitas hingga 25%.</li>
-                        <li>Menjalankan UAT lintas 15+ modul fungsional, berkoordinasi dengan developer untuk mencapai 96% tingkat resolusi *bug*.</li>
+                    <p class="text-blue-600 text-sm font-medium mb-3">Shoesfastind (Malang, Jawa Timur)[cite: 12]</p>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm">
+                        <li>Memimpin siklus rekrutmen end-to-end untuk program magang, merekrut 45+ kandidat berkualitas[cite: 12].</li>
+                        <li>Mengelola dan mengeksekusi 10+ proyek perusahaan secara simultan dengan tingkat pengiriman tepat waktu 100%[cite: 12].</li>
+                    </ul>
+                </div>
+
+                <!-- Exp 5 -->
+                <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                        <h3 class="text-xl font-bold text-slate-900">Laboratory Teaching Assistant (Systems Analysis and Design)</h3>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit">September 2025 - Desember 2025[cite: 14]</span>
+                    </div>
+                    <p class="text-blue-600 text-sm font-medium mb-3">Learning Laboratory, FILKOM UB (Malang)[cite: 14]</p>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm">
+                        <li>Membimbing 30 mahasiswa teknik informatika dalam praktikum Analisis dan Perancangan Sistem dengan tingkat pemahaman 98%[cite: 14].</li>
+                        <li>Merancang modul praktikum UML modeling, Use Case, Activity, dan ERD, serta menilai SRS untuk 150+ mahasiswa[cite: 14].</li>
+                    </ul>
+                </div>
+
+                <!-- Exp 6 -->
+                <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                        <h3 class="text-xl font-bold text-slate-900">Junior Software Engineer & Project Manager</h3>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit">Maret 2025 - Juni 2025[cite: 15, 16]</span>
+                    </div>
+                    <p class="text-blue-600 text-sm font-medium mb-3">MGM Laboratory (Malang)[cite: 15]</p>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm">
+                        <li>Menyusun SRS untuk platform inventaris web & Android, mengurangi ambiguitas kebutuhan hingga 40%[cite: 15].</li>
+                        <li>Merancang arsitektur sistem, UML, dan database ERD untuk 4 modul inti inventaris[cite: 15].</li>
+                    </ul>
+                </div>
+
+                <!-- Exp 7 -->
+                <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                        <h3 class="text-xl font-bold text-slate-900">Office Administrator</h3>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit">Desember 2024 - Januari 2025[cite: 17]</span>
+                    </div>
+                    <p class="text-blue-600 text-sm font-medium mb-3">KPKNL Malang, Direktorat Jenderal Kekayaan Negara Kementerian Keuangan RI[cite: 17]</p>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm">
+                        <li>Mengelola dan memverifikasi 250+ record aset negara di sistem SAKTI dengan akurasi 99.9%[cite: 17].</li>
+                        <li>Memelopori digitalisasi arsip risalah lelang historis selama 124 tahun (1900-2024) ke dalam database terstruktur[cite: 17].</li>
+                    </ul>
+                </div>
+
+                <!-- Exp 8 -->
+                <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 hover:shadow-md transition">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                        <h3 class="text-xl font-bold text-slate-900">UX Researcher & UAT Analyst</h3>
+                        <span class="text-xs font-semibold px-3 py-1 bg-blue-100 text-blue-800 rounded-full w-fit">Mei 2024 - Oktober 2024[cite: 17, 18]</span>
+                    </div>
+                    <p class="text-blue-600 text-sm font-medium mb-3">BKPSDM Kabupaten Malang & FILKOM UB[cite: 17, 18]</p>
+                    <ul class="list-disc list-inside space-y-1.5 text-slate-600 text-sm">
+                        <li>Melakukan riset pengguna sistem CAT BKPSDM, merancang wireframe & prototype Figma, serta meningkatkan usability scores 25%[cite: 18].</li>
+                        <li>Merancang dan mengeksekusi UAT untuk 15+ modul fungsional, mencapai 96% bug resolution rate[cite: 19].</li>
                     </ul>
                 </div>
             </div>
@@ -208,38 +250,29 @@
     <section id="projects" class="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">Proyek Unggulan</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Project 1 -->
             <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between">
                 <div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Smart Inventory System Air Mancur</h3>
-                    <p class="text-xs text-blue-600 font-semibold mb-3">System Analyst & Project Manager (Capstone)</p>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                        Pengembangan sistem manajemen inventaris cerdas berbasis web dengan arsitektur modern dan analisis kebutuhan rantai pasok terintegrasi.
-                    </p>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">CRM Android Applications</h3>
+                    <p class="text-xs text-blue-600 font-semibold mb-3">Android Developer (Vrasmedia)</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Pengembangan front-end CRM berperforma tinggi menggunakan Kotlin (MVVM & Coroutines) dengan dukungan Firebase untuk 5,000+ pengguna aktif[cite: 9].</p>
                 </div>
-                <span class="text-xs text-slate-400 font-medium">Fakultas Ilmu Komputer UB</span>
+                <span class="text-xs text-slate-400 font-medium">Kotlin, Firebase, MVVM</span>
             </div>
-            <!-- Project 2 -->
             <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between">
                 <div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">MikroLine Public Transportation App</h3>
-                    <p class="text-xs text-blue-600 font-semibold mb-3">System Analyst, UI Designer & PM</p>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                        Aplikasi transportasi publik online Malang dengan perancangan alur pengguna, wireframe interaktif, dan pemodelan proses bisnis yang komprehensif.
-                    </p>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Smart Inventory System Web & Android</h3>
+                    <p class="text-xs text-blue-600 font-semibold mb-3">Junior Software Engineer & PM (MGM Lab)</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Perancangan SRS, arsitektur sistem, UML, dan database ERD untuk platform manajemen inventaris lintas platform[cite: 15].</p>
                 </div>
-                <span class="text-xs text-slate-400 font-medium">Start-Up Action Competition</span>
+                <span class="text-xs text-slate-400 font-medium">SRS, UML, ERD, UAT</span>
             </div>
-            <!-- Project 3 -->
             <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm flex flex-col justify-between">
                 <div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">KopiMetric Platform</h3>
-                    <p class="text-xs text-blue-600 font-semibold mb-3">Lead System Analyst (DBS Camp)</p>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                        Platform web analitik dampak konsumsi kopi terhadap kualitas tidur dengan pemodelan basis data relasional dan diagram UML lengkap.
-                    </p>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">CAT System UI/UX & UAT Modernization</h3>
+                    <p class="text-xs text-blue-600 font-semibold mb-3">UX Researcher & UAT Analyst (BKPSDM)</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">Transformasi alur kerja administratif ke digital interface yang intuitif dengan pengujian UAT komprehensif[cite: 18, 19].</p>
                 </div>
-                <span class="text-xs text-slate-400 font-medium">Live Web App Integration</span>
+                <span class="text-xs text-slate-400 font-medium">Figma, SUS, UAT Testing</span>
             </div>
         </div>
     </section>
@@ -247,50 +280,46 @@
     <!-- Skills & Certifications Section -->
     <section id="skills" class="py-16 bg-white border-t border-slate-200">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">Keahlian & Sertifikasi Profesional</h2>
+            <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">Keahlian & Sertifikasi Resmi</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Hard Skills -->
                 <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <h3 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-code text-blue-600"></i> Hard Skills
+                    <h3 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2 text-blue-600">
+                        <i class="fa-solid fa-code"></i> Keahlian Utama
                     </h3>
                     <ul class="space-y-2 text-sm text-slate-700">
                         <li>• System Analysis & Design</li>
-                        <li>• Requirements Elicitation & Analysis</li>
-                        <li>• Business Process Analysis & Mapping</li>
-                        <li>• SRS Documentation & FSD / BRD</li>
-                        <li>• UML Modeling (Use Case, Activity, Sequence)</li>
-                        <li>• Entity Relationship Diagram (ERD)</li>
+                        <li>• Teaching & Mentorship[cite: 9]</li>
+                        <li>• Sprint Planning & Agile[cite: 9]</li>
+                        <li>• IT Risk Management[cite: 9]</li>
+                        <li>• Requirements Elicitation & SRS</li>
+                        <li>• UML Modeling & ERD</li>
                         <li>• UAT & QA Validation</li>
                     </ul>
                 </div>
-                <!-- Tools & Professional -->
                 <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <h3 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-toolbox text-blue-600"></i> Tools & Methodologies
+                    <h3 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2 text-blue-600">
+                        <i class="fa-solid fa-toolbox"></i> Bahasa & Tools
                     </h3>
                     <ul class="space-y-2 text-sm text-slate-700">
+                        <li>• Bahasa Indonesia (Native), English (Professional)[cite: 9]</li>
+                        <li>• Kotlin, Python, JavaScript</li>
                         <li>• Figma & Figjam</li>
-                        <li>• Trello & Useberry</li>
-                        <li>• Agile & Scrum Methodologies</li>
-                        <li>• Python & JavaScript Basics</li>
-                        <li>• Microsoft Office Professional</li>
-                        <li>• UX Research & Usability Testing</li>
+                        <li>• Firebase Console & Room Database</li>
+                        <li>• Trello, Useberry, Microsoft SAKTI</li>
                     </ul>
                 </div>
-                <!-- Certifications -->
                 <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <h3 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2">
-                        <i class="fa-solid fa-certificate text-blue-600"></i> Sertifikasi Resmi
+                    <h3 class="font-bold text-lg text-slate-900 mb-4 flex items-center gap-2 text-blue-600">
+                        <i class="fa-solid fa-certificate"></i> Sertifikasi Resmi (BNSP)
                     </h3>
                     <ul class="space-y-3 text-sm text-slate-700">
                         <li class="font-semibold text-slate-900">
-                            1. Software Engineer (BNSP)
-                            <span class="block text-xs font-normal text-slate-500">LSP-P1 Universitas Brawijaya</span>
+                            1. Perekayasa Perangkat Lunak / Software Engineer (BNSP)[cite: 20]
+                            <span class="block text-xs font-normal text-slate-500">LSP-P1 Universitas Brawijaya (No. 62019 2513 0 0000100 2026)[cite: 20]</span>
                         </li>
                         <li class="font-semibold text-slate-900">
-                            2. Web Developer Madya (BNSP)
-                            <span class="block text-xs font-normal text-slate-500">LSP-P1 Universitas Brawijaya</span>
+                            2. Basics of Data Science[cite: 9]
+                            <span class="block text-xs font-normal text-slate-500">Dicoding & Asah Scholarship[cite: 9]</span>
                         </li>
                     </ul>
                 </div>
@@ -307,8 +336,8 @@
                     <i class="fa-solid fa-trophy text-xl"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-slate-900">Best Presenter in INVENT International Conference</h3>
-                    <p class="text-xs text-slate-500 mt-1">Universitas Brawijaya (Oktober 2026)</p>
+                    <h3 class="font-bold text-slate-900">Best Presenter - INVENT International Conference 2026</h3>
+                    <p class="text-xs text-slate-500 mt-1">ATU-Net, Universitas Brawijaya[cite: 21]</p>
                 </div>
             </div>
             <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm flex items-start gap-4">
@@ -316,19 +345,37 @@
                     <i class="fa-solid fa-award text-xl"></i>
                 </div>
                 <div>
-                    <h3 class="font-bold text-slate-900">Most Favorite Paper in International Student Conference</h3>
-                    <p class="text-xs text-slate-500 mt-1">RUDN University, KOMNAS HAM RI (September 2026)</p>
+                    <h3 class="font-bold text-slate-900">Most Favorite Paper Award - ISCHR 2026</h3>
+                    <p class="text-xs text-slate-500 mt-1">Faculty of Law Universitas Brawijaya, RUDN University, KOMNAS HAM RI[cite: 23]</p>
+                </div>
+            </div>
+            <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm flex items-start gap-4">
+                <div class="p-3 bg-blue-100 text-blue-700 rounded-lg">
+                    <i class="fa-solid fa-medal text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900">Bronze Medalist & Best Poster Award Winner</h3>
+                    <p class="text-xs text-slate-500 mt-1">National Entrepreneurship Competition (NEC) 2024[cite: 9]</p>
+                </div>
+            </div>
+            <div class="p-6 bg-white rounded-xl border border-slate-200 shadow-sm flex items-start gap-4">
+                <div class="p-3 bg-blue-100 text-blue-700 rounded-lg">
+                    <i class="fa-solid fa-star text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-900">Silver Medalist & Favorite Poster Winner</h3>
+                    <p class="text-xs text-slate-500 mt-1">National Education Essay Competition 2023[cite: 9]</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer / Contact -->
+    <!-- Footer -->
     <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
                 <p class="font-bold text-white text-lg">Hanidura Ayatulloh</p>
-                <p class="text-sm text-slate-400">System Analyst & Software Engineer | Malang, Indonesia</p>
+                <p class="text-sm text-slate-400">System Analyst, Data Analyst & Software Engineer | Malang, Indonesia[cite: 9]</p>
             </div>
             <div class="flex items-center gap-6 text-xl">
                 <a href="https://www.linkedin.com/in/haniduraayatulloh/" target="_blank" class="hover:text-blue-400 transition"><i class="fa-brands fa-linkedin"></i></a>
